@@ -56,8 +56,19 @@
         <label><input type="checkbox" name="food" value="other" /> Other (Tell me!)</label>
       </div>
     </div>
-    <button class="button" onclick="location.href='dessert.html'">
-      Continue!
-    </button>
+    <button class="button" onclick="saveSelections('food')">Continue!</button>
+
+    <script>
+        function saveSelections(page) {
+          let selectedValues = [];
+          document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+              selectedValues.push(checkbox.value);
+          });
+          selectedValues.push('break');
+
+          localStorage.setItem("selectedOptions", JSON.stringify(selectedValues));
+          window.location.href = "dessert.html";
+        }
+    </script>
   </body>
 </html>

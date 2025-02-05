@@ -58,8 +58,19 @@
         >
       </div>
     </div>
-    <button class="button" onclick="location.href='activities.html'">
-      Continue!
-    </button>
+    <button class="button" onclick="saveSelections('dessert')">Continue!</button>
+
+    <script>
+      function saveSelections(page) {
+          let selectedValues = JSON.parse(localStorage.getItem("selectedOptions"));
+          document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+              selectedValues.push(checkbox.value);
+          });
+          selectedValues.push('break');
+
+          localStorage.setItem("selectedOptions", JSON.stringify(selectedValues));
+          window.location.href = "activities.html";
+      }
+  </script>
   </body>
 </html>

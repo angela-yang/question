@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>I love you</title>
+        <link rel="stylesheet" href="css/lastpage.css" />
+    </head>
+    <body>
+    <div id="selection"> <b>Here's what you selected!</b></div>
+    <h1 id="selectedDateText">Loading date...</h1>
+    <script>
+      let selectedDate = localStorage.getItem("selectedDate");
+      if (selectedDate) {
+          document.getElementById("selectedDateText").textContent = "On " + selectedDate;
+      } else {
+          document.getElementById("selectedDateText").textContent = "No date selected.";
+      }
+    </script>
+    <h1><b>Here are our potential dinner plans!</b></h1>
+    <ul id="foodSelectedList"></ul>
+    </br>
+    <h1><b>Yummy treat:</b></h1>
+    <ul id="dessertSelectedList"></ul>
+    </br>
+    <h1><b>And what we might do:</b></h1>
+    <ul id="activitiesSelectedList"></ul>
+    <script>
+        let selectedValues = JSON.parse(localStorage.getItem("selectedOptions"));
+        let foodList = document.getElementById("foodSelectedList");
+        let breaked = false;
+        let selectedValues2 = [];
+        if (selectedValues.length > 0) {
+            selectedValues.forEach(value => {
+            let li = document.createElement("li");
+            li.textContent = value;
+            if (breaked == true) {
+                selectedValues2.push(value);
+            } else {
+                foodList.appendChild(li);
+            }
+            if (value == 'break') {
+                breaked = true;
+            }
+          });
+          foodList.removeChild(foodList.lastChild);
+      } else {
+          foodList.innerHTML = "<li>No options selected.</li>";
+      }
+
+      //<==---------------------------------------------------==>
+
+        let dessertList = document.getElementById("dessertSelectedList");
+        breaked = false;
+        let selectedValues3 = [];
+        if (selectedValues2.length > 0) {
+            selectedValues2.forEach(value => {
+                let li = document.createElement("li");
+                li.textContent = value;
+                if (breaked == true) {
+                    selectedValues3.push(value);
+                } else {
+                    dessertList.appendChild(li);
+                }
+                if (value == 'break') {
+                    breaked = true;
+                }
+            });
+            dessertList.removeChild(dessertList.lastChild);
+        } else {
+            dessertList.innerHTML = "<li>No options selected.</li>";
+        }
+
+      //<==----------------------------------------------------==>
+
+        let activitiesList = document.getElementById("activitiesSelectedList");
+        if (selectedValues3.length > 0) {
+            selectedValues3.forEach(value => {
+                let li = document.createElement("li");
+                li.textContent = value;
+                activitiesList.appendChild(li);
+            });
+            activitiesList.removeChild(activitiesList.lastChild);
+        } else {
+            activitiesList.innerHTML = "<li>No options selected.</li>";
+        }
+    </script>
+    </br>
+    <h1><b>Please take a picture and send it to me baby!! <3</b></h1>
+    <button class="button" onclick="location.href='lastpage.html'">
+        YES I CONFIRM!
+    </button>
+</body>

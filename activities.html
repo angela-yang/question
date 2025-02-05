@@ -90,8 +90,19 @@
         >
       </div>
     </div>
-    <button class="button" onclick="location.href='lastpage.html'">
-      LAST PAGE!
-    </button>
+    <button class="button" onclick="saveSelections('activities')">LAST PAGE!</button>
+
+    <script>
+        function saveSelections(page) {
+          let selectedValues = JSON.parse(localStorage.getItem("selectedOptions"));
+          document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+              selectedValues.push(checkbox.value);
+          });
+          selectedValues.push('break');
+
+          localStorage.setItem("selectedOptions", JSON.stringify(selectedValues));
+          window.location.href = "list.html";
+        }
+    </script>
   </body>
 </html>
