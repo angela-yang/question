@@ -43,14 +43,14 @@ body {
   margin: 10px;
   font-family: "courier";
   margin-bottom: 20px;
-  background-color: #ff6464;
-  color: #ffefef;
+  background-color: #ffafaf;
+  color: #000000;
   border-radius: 12px;
-  border: 2px solid #ff3d3d;
+  border: 3px solid #ff6464;
 }
 
 .button:hover {
-  background-color: #ffcdcd;
-  color: #dd2e40;
-  border: 2px solid #dd2e40;
+  background-color: #ca414f;
+  color: #ffd7da;
+  border: 2px solid #ca414f;
 }
