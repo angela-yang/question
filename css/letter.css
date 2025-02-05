@@ -53,10 +53,6 @@ body {
     transition: transform 1s ease;
 }
 
-#button:active {
-    transform: scale(100);
-}
-
 .envelope {
     position: absolute;
     height: 100%;
