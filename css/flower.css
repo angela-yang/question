@@ -15,14 +15,15 @@
 }
 
 body{
-    background-color: #FFF5E4;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
-	color: #ff6969;
+	color: #fa4d4d;
+    background-image: url("heartss.avif");
+    background-size: cover;
 	font-family: courier;
 }
 
@@ -31,8 +32,7 @@ body{
     text-align: center;
     margin-top: 50px;
     font-family: "Patua-One", "sans-serif";
-    background-color: #fff5e4;
-    color: #ff6969;
+    color: #fa4d4d;
     z-index: 1000; 
     position: relative;
 	margin-bottom: 400px;

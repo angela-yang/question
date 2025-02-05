@@ -5,7 +5,9 @@ body {
   margin-top: 40px;
   font-family: "Patua-One", "sans-serif";
   background-color: #fff5e4;
-  color: #ff6969;
+  color: #fa4d4d;
+  background-image: url("heartss.avif");
+  background-size: cover;
 }
 
 #activityquestion {
@@ -17,7 +19,7 @@ body {
   display: inline-table;
   margin: 10px;
   vertical-align: top;
-  color: #ff6969;
+  color: #fa4d4d;
 }
 
 .activity-item img {
