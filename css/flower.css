@@ -149,14 +149,14 @@ body{
 .f-wrapper--3 .flower__leaf:not(:first-child){
     width: 3.8vmin;
     height: 10vmin;
-    background-image: linear-gradient(to bottom, #2b64e0 ,#223691, #1a1c3a 99%);
+    background-image: linear-gradient(to bottom, #5d88e3 ,#485cb6, #1a1c3a 99%);
 }
 
 .f-wrapper--3 .flower__leaf--1{
     width: 8vmin;
     height: 10vmin;
     bottom: 2vmin;
-    background-color: #3170d6;
+    background-color: #5a88d2;
 }
 
 .f-wrapper--2 .flower__leaf--1{
