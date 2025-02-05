@@ -11,12 +11,12 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .button {
-  padding: 10px 20px;
-  font-size: 15px;
+  padding: 15px 25px;
+  font-size: 20px;
   cursor: pointer;
   margin: 10px;
   font-family: "courier";
@@ -34,8 +34,8 @@ h1 {
 }
 
 input[type="date"] {
-  padding: 10px 20px;
-  font-size: 15px;
+  padding: 15px 25px;
+  font-size: 20px;
   cursor: pointer;
   margin: 10px;
   font-family: "courier";
